@@ -50,9 +50,8 @@ pub struct Create<'info> {
     #[
         account(init, 
         payer = user, 
-        space = 1000, 
-        seeds = [b"bank_account", 
-        user.key().as_ref()], 
+        space = 5000, 
+        seeds = [b"bank_account", user.key().as_ref()], 
         bump)
     ]
     pub bank: Account<'info, Bank>,
